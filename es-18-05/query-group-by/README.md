@@ -22,9 +22,10 @@ GROUP BY `office_address`;
 Query-3 (Calcolare la media dei voti di ogni appello d'esame)
 RISPOSTA (17.9573)
 <!-- QUERY -->
-SELECT AVG(`vote`) AS `media_voti` FROM `exam_student`
+SELECT AVG(`vote`) AS `media_voti` FROM `exam_student` GROUP BY `exam_id`;
 
 Query-4(Contare quanti corsi di laurea ci sono per ogni dipartimento)
 RISPOSTA(75)
 <!-- QUERY -->
 SELECT COUNT(`id`) AS `corsi_per_dipartimento` FROM `courses` GROUP BY `degree_id`
+SELECT COUNT(*) `department_id` FROM `degrees` GROUP BY `department_id`;
